@@ -126,7 +126,7 @@ func MainNetRules() Rules {
 		Epochs:    DefaultEpochsRules(),
 		Economy:   DefaultEconomyRules(),
 		Blocks: BlocksRules{
-			MaxBlockGas:             20500000,
+			MaxBlockGas:             20500000000,
 			MaxEmptyBlockSkipPeriod: inter.Timestamp(1 * time.Minute),
 		},
 	}
@@ -140,7 +140,7 @@ func TestNetRules() Rules {
 		Epochs:    DefaultEpochsRules(),
 		Economy:   DefaultEconomyRules(),
 		Blocks: BlocksRules{
-			MaxBlockGas:             20500000,
+			MaxBlockGas:             20500000000,
 			MaxEmptyBlockSkipPeriod: inter.Timestamp(1 * time.Minute),
 		},
 	}
@@ -154,7 +154,7 @@ func FakeNetRules() Rules {
 		Epochs:    FakeNetEpochsRules(),
 		Economy:   FakeEconomyRules(),
 		Blocks: BlocksRules{
-			MaxBlockGas:             20500000,
+			MaxBlockGas:             20500000000,
 			MaxEmptyBlockSkipPeriod: inter.Timestamp(3 * time.Second),
 		},
 	}
@@ -189,14 +189,14 @@ func DefaultDagRules() DagRules {
 
 func DefaultEpochsRules() EpochsRules {
 	return EpochsRules{
-		MaxEpochGas:      1500000000,
+		MaxEpochGas:      1500000000000,
 		MaxEpochDuration: inter.Timestamp(4 * time.Hour),
 	}
 }
 
 func DefaultGasRules() GasRules {
 	return GasRules{
-		MaxEventGas:  10000000 + DefaultEventGas,
+		MaxEventGas:  10000000000 + DefaultEventGas,
 		EventGas:     DefaultEventGas,
 		ParentGas:    2400,
 		ExtraDataGas: 25,
